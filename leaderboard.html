@@ -1,0 +1,209 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script
+      src="https://unpkg.com/unlazy@0.11.3/dist/unlazy.with-hashing.iife.js"
+      defer
+      init
+    ></script>
+    <script type="text/javascript">
+      window.tailwind.config = {
+        darkMode: ["class"],
+        theme: {
+          extend: {
+            colors: {
+              border: "hsl(var(--border))",
+              input: "hsl(var(--input))",
+              ring: "hsl(var(--ring))",
+              background: "hsl(var(--background))",
+              foreground: "hsl(var(--foreground))",
+              primary: {
+                DEFAULT: "hsl(var(--primary))",
+                foreground: "hsl(var(--primary-foreground))",
+              },
+              secondary: {
+                DEFAULT: "hsl(var(--secondary))",
+                foreground: "hsl(var(--secondary-foreground))",
+              },
+              destructive: {
+                DEFAULT: "hsl(var(--destructive))",
+                foreground: "hsl(var(--destructive-foreground))",
+              },
+              muted: {
+                DEFAULT: "hsl(var(--muted))",
+                foreground: "hsl(var(--muted-foreground))",
+              },
+              accent: {
+                DEFAULT: "hsl(var(--accent))",
+                foreground: "hsl(var(--accent-foreground))",
+              },
+              popover: {
+                DEFAULT: "hsl(var(--popover))",
+                foreground: "hsl(var(--popover-foreground))",
+              },
+              card: {
+                DEFAULT: "hsl(var(--card))",
+                foreground: "hsl(var(--card-foreground))",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer base {
+        :root {
+          --background: 0 0% 100%;
+          --foreground: 240 10% 3.9%;
+          --card: 0 0% 100%;
+          --card-foreground: 240 10% 3.9%;
+          --popover: 0 0% 100%;
+          --popover-foreground: 240 10% 3.9%;
+          --primary: 240 5.9% 10%;
+          --primary-foreground: 0 0% 98%;
+          --secondary: 240 4.8% 95.9%;
+          --secondary-foreground: 240 5.9% 10%;
+          --muted: 240 4.8% 95.9%;
+          --muted-foreground: 240 3.8% 46.1%;
+          --accent: 240 4.8% 95.9%;
+          --accent-foreground: 240 5.9% 10%;
+          --destructive: 0 84.2% 60.2%;
+          --destructive-foreground: 0 0% 98%;
+          --border: 240 5.9% 90%;
+          --input: 240 5.9% 90%;
+          --ring: 240 5.9% 10%;
+          --radius: 0.5rem;
+        }
+        .dark {
+          --background: 240 10% 3.9%;
+          --foreground: 0 0% 98%;
+          --card: 240 10% 3.9%;
+          --card-foreground: 0 0% 98%;
+          --popover: 240 10% 3.9%;
+          --popover-foreground: 0 0% 98%;
+          --primary: 0 0% 98%;
+          --primary-foreground: 240 5.9% 10%;
+          --secondary: 240 3.7% 15.9%;
+          --secondary-foreground: 0 0% 98%;
+          --muted: 240 3.7% 15.9%;
+          --muted-foreground: 240 5% 64.9%;
+          --accent: 240 3.7% 15.9%;
+          --accent-foreground: 0 0% 98%;
+          --destructive: 0 62.8% 30.6%;
+          --destructive-foreground: 0 0% 98%;
+          --border: 240 3.7% 15.9%;
+          --input: 240 3.7% 15.9%;
+          --ring: 240 4.9% 83.9%;
+        }
+      }
+    </style>
+  </head>
+  <body
+    style="
+      background-image: url(Employee-leaderboard.png);
+      background-size: cover;
+    "
+  >
+    <body class="bg-background text-foreground">
+      <nav class="flex justify-between items-center p-4 bg-black">
+        <button class="bg-secondary text-secondary-foreground p-2 rounded-md">
+          Back
+        </button>
+        <div class="flex space-x-4">
+          <a href="#" class="text-muted hover:text-muted-foreground">Home</a>
+          <a href="#" class="text-muted hover:text-muted-foreground">Events</a>
+          <a href="#" class="text-muted hover:text-muted-foreground"
+            >Feedback</a
+          >
+        </div>
+        <img
+          aria-hidden="true"
+          alt="user-icon"
+          src="https://openui.fly.dev/openui/24x24.svg?text=👤"
+          class="w-8 h-8"
+        />
+      </nav>
+      <div
+        class="max-w-md mx-auto mt-8 p-6 bg-card rounded-lg shadow-lg"
+        style="
+          margin-top: 200px;
+          border: 2px;
+          border-radius: 10px;
+          box-shadow: 1px 1px 4px black;
+        "
+      >
+        <h1 class="text-3xl font-bold text-center mb-4">LEADERBOARD</h1>
+        <ol class="space-y-4">
+          <li class="flex items-center">
+            <span class="font-bold text-xl mr-2">1.</span>
+            <img
+              aria-hidden="true"
+              alt="Shawn"
+              src="https://openui.fly.dev/openui/24x24.svg?text=🦸‍♂️"
+              class="w-10 h-10 rounded-full mr-2"
+            />
+            <span class="flex-1">Shawn</span>
+            <span class="text-muted">1220pts</span>
+          </li>
+          <li class="flex items-center">
+            <span class="font-bold text-xl mr-2">2.</span>
+            <img
+              aria-hidden="true"
+              alt="Parker"
+              src="https://openui.fly.dev/openui/24x24.svg?text=🧑‍🦱"
+              class="w-10 h-10 rounded-full mr-2"
+            />
+            <span class="flex-1">Parker</span>
+            <span class="text-muted">1109pts</span>
+          </li>
+          <li class="flex items-center">
+            <span class="font-bold text-xl mr-2">3.</span>
+            <img
+              aria-hidden="true"
+              alt="Priya"
+              src="https://openui.fly.dev/openui/24x24.svg?text=👩"
+              class="w-10 h-10 rounded-full mr-2"
+            />
+            <span class="flex-1">Priya</span>
+            <span class="text-muted">1027pts</span>
+          </li>
+          <li class="flex items-center">
+            <span class="font-bold text-xl mr-2">4.</span>
+            <img
+              aria-hidden="true"
+              alt="Karthik Krishna"
+              src="https://openui.fly.dev/openui/24x24.svg?text=👨‍🦰"
+              class="w-10 h-10 rounded-full mr-2"
+            />
+            <span class="flex-1">Karthik Krishna</span>
+            <span class="text-muted">950pts</span>
+          </li>
+          <li class="flex items-center">
+            <span class="font-bold text-xl mr-2">5.</span>
+            <img
+              aria-hidden="true"
+              alt="Sijin Sam"
+              src="https://openui.fly.dev/openui/24x24.svg?text=🧑‍🦰"
+              class="w-10 h-10 rounded-full mr-2"
+            />
+            <span class="flex-1">Sijin Sam</span>
+            <span class="text-muted">892pts</span>
+          </li>
+          <li class="flex items-center">
+            <span class="font-bold text-xl mr-2">6.</span>
+            <img
+              aria-hidden="true"
+              alt="Tharika"
+              src="https://openui.fly.dev/openui/24x24.svg?text=👩‍🦳"
+              class="w-10 h-10 rounded-full mr-2"
+            />
+            <span class="flex-1">Tharika</span>
+            <span class="text-muted">880pts</span>
+          </li>
+        </ol>
+      </div>
+    </body>
+  </body>
+</html>
